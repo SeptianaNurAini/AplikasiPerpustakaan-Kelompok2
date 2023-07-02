@@ -9,6 +9,14 @@ Public Class FormLogin
 
         Form1.LaporanToolStripMenuItem.Enabled = True
 
+        Form1.PictureBox1.Enabled = True
+        Form1.PictureBox2.Enabled = True
+        Form1.PictureBox3.Enabled = True
+        Form1.PictureBox4.Enabled = True
+        Form1.PictureBox5.Enabled = True
+        Form1.PictureBox6.Enabled = True
+        Form1.PictureBox7.Enabled = True
+
 
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

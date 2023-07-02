@@ -4,8 +4,16 @@
         LogoutToolStripMenuItem.Enabled = False
         MasterToolStripMenuItem.Enabled = False
         TransaksiToolStripMenuItem.Enabled = False
-
         LaporanToolStripMenuItem.Enabled = False
+
+        PictureBox1.Enabled = False
+        PictureBox2.Enabled = False
+        PictureBox3.Enabled = False
+        PictureBox4.Enabled = False
+        PictureBox5.Enabled = False
+        PictureBox6.Enabled = False
+        PictureBox7.Enabled = False
+
     End Sub
 
     Private Sub LoginToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles LoginToolStripMenuItem.Click
@@ -56,5 +64,34 @@
     Private Sub LaporanPengembalianToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LaporanPengembalianToolStripMenuItem.Click
         FormLaporanPengembalian.ShowDialog()
 
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        FormMasterPetugas.ShowDialog()
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        FormMasterAnggota.ShowDialog()
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        FormMasterBuku.ShowDialog()
+
+    End Sub
+
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        FormTransPinjam.ShowDialog()
+    End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        FormTransKembali.ShowDialog()
+    End Sub
+
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
+        FormLaporanPeminjaman.ShowDialog()
+    End Sub
+
+    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
+        FormLaporanPengembalian.ShowDialog()
     End Sub
 End Class

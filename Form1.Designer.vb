@@ -392,7 +392,7 @@ Partial Class Form1
         GroupBox1.Controls.Add(Label1)
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label3)
-        GroupBox1.Location = New Point(92, 518)
+        GroupBox1.Location = New Point(92, 501)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(375, 162)
         GroupBox1.TabIndex = 17
@@ -405,7 +405,7 @@ Partial Class Form1
         GroupBox2.Controls.Add(PictureBox5)
         GroupBox2.Controls.Add(Label4)
         GroupBox2.Controls.Add(Label5)
-        GroupBox2.Location = New Point(561, 518)
+        GroupBox2.Location = New Point(561, 501)
         GroupBox2.Name = "GroupBox2"
         GroupBox2.Size = New Size(329, 162)
         GroupBox2.TabIndex = 18
@@ -418,7 +418,7 @@ Partial Class Form1
         GroupBox3.Controls.Add(PictureBox7)
         GroupBox3.Controls.Add(Label6)
         GroupBox3.Controls.Add(Label7)
-        GroupBox3.Location = New Point(960, 518)
+        GroupBox3.Location = New Point(960, 501)
         GroupBox3.Name = "GroupBox3"
         GroupBox3.Size = New Size(349, 164)
         GroupBox3.TabIndex = 19

@@ -16,13 +16,13 @@ Public Class FormTransPinjam
         ComboBox1.Text = ""
         Call BuatKolom()
     End Sub
-    Private Sub FormTransPinjam_Load(sender As Object, e As EventArgs)
+    Private Sub FormTransPinjam_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call KondisiAwal()
         LBLTanggal.Text = Today
 
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs)
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         LBLJam.Text = TimeOfDay
     End Sub
 
@@ -52,7 +52,7 @@ Public Class FormTransPinjam
         Loop
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.Click
         Call Koneksi()
         Cmd = New SqlCommand("select * from tbl_anggota where  kodeanggota='" & ComboBox1.Text & "'", Conn)
         Rd = Cmd.ExecuteReader
@@ -76,7 +76,7 @@ Public Class FormTransPinjam
         DataGridView1.Columns.Add("Jumlah", "Jumlah")
     End Sub
 
-    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
         If e.KeyChar = Chr(13) Then
             Call Koneksi()
             Cmd = New SqlCommand("select *from tbl_buku where kodebuku='" & TextBox1.Text & "'", Conn)
@@ -104,7 +104,7 @@ Public Class FormTransPinjam
     End Sub
 
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If LBLNama.Text = "" Or Label9.Text = "" Then
             MsgBox("Transaksi Tidak Ada, silahkan lakukan transaksi terlebih dahulu", vbCritical)
         Else
@@ -135,15 +135,15 @@ Public Class FormTransPinjam
         End If
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Call KondisiAwal()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs)
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Me.Close()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If Val(LBLTelahPinjam.Text) + Val(LBLTotalBuku.Text) >= 5 Or Val(LBLTotalBuku.Text) + Val(TextBox2.Text) > 5 Then
             MsgBox("Buku yang dipinjam melebihi maksimal!", vbCritical)
         Else
@@ -175,11 +175,11 @@ Public Class FormTransPinjam
 
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
 
     End Sub
 End Class
